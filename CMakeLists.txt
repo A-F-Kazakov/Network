@@ -26,6 +26,8 @@ if(WIN32)
 	target_link_libraries(${PROJECT_NAME} INTERFACE ws2_32)
 endif()
 
+configure_file(config.hpp.in config.hpp)
+
 add_library(${CMAKE_PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 install(EXPORT ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_LIB_DIR}/cmake/${PROJECT_NAME_LOWER} FILE ${PROJECT_NAME}Config.cmake)

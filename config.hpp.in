@@ -1,0 +1,17 @@
+#ifndef @CMAKE_PROJECT_NAME_UPPER@_@PROJECT_NAME_UPPER@_CONFIG_HPP
+#define @CMAKE_PROJECT_NAME_UPPER@_@PROJECT_NAME_UPPER@_CONFIG_HPP
+
+#define NETWORK_NAMESPACE @CMAKE_PROJECT_NAME_LOWER@::@PROJECT_NAME_LOWER@
+
+NETWORK_NAMESPACE
+{
+	namespace version
+	{
+		constexpr auto string{"@NETWORK_VERSION@"};
+		constexpr auto minor{@NETWORK_VERSION_MINOR@};
+		constexpr auto major{@NETWORK_VERSION_MAJOR@};
+		constexpr auto patch{@NETWORK_VERSION_PATCH@};
+	}
+}
+
+#endif
